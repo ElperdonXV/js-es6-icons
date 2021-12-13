@@ -8,3 +8,27 @@ html{
     font-size: 100%;
 }
 
+.select{
+    height: 60px;
+    background-color: lightskyblue;
+    width: 100%;
+}
+
+.content{
+    background-color: lightgray;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
