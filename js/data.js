@@ -124,7 +124,7 @@ const container = document.querySelector(".content");
 all.forEach((element) => {
 	container.innerHTML += `
         <div class="box">
-			<div><i class="${element.family} ${element.prefix}${element.type}" style="color:${element.color}"></i></div>
+			<div><i class="${element.family} ${element.prefix}${element.name}" style="color:${element.color}"></i></div>
             <h2>${element.name}</h2>
         </div>
     `;
