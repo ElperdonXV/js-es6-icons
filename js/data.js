@@ -121,13 +121,39 @@ const all = [
 	}
 ];
 const container = document.querySelector(".content");
-all.forEach((element) => {
-	container.innerHTML += `
+let filter = document.getElementById('filter');
+
+let animali = all.filter((element) => {
+	return element.type == "animal";
+});
+let verdure = all.filter((element) => {
+	return element.type == "vegetable";
+});
+let utenti = all.filter((element) => {
+	return element.type == "user";
+});
+
+
+for(let i=0; i<all.length; i++){
+	container.innerHTML += makeBox(all[i]);
+}
+	
+filter.addEventListener('change', function(){
+	if( filter.value == 'All' ){
+		//container.innerHTML = '';
+		container.innerHTML += makeBox(all);
+	}
+});
+
+
+function makeBox(element) {
+	const card = `
         <div class="box">
 			<div class="icons">
 				<i class="${element.family} ${element.prefix}${element.name}" style="color:${element.color}"></i>
 				<h2>${element.name}</h2>
 			</div>
         </div>
-    `;
-});
+        `;
+	return card;
+}
