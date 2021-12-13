@@ -26,10 +26,21 @@ html{
 
 .box {
     width: 300px;
-    height: 150px;
+    height: 200px;
     border-radius: 20px;
     background-color: lightskyblue;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icons{
+    text-align: center;
+}
+.icons i{
+    font-size: 4.5em;
+}
+
+.icons h2{
+    font-size: 2em;
+    margin: 2px 0;
 }
