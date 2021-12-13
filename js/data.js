@@ -139,9 +139,29 @@ for(let i=0; i<all.length; i++){
 }
 	
 filter.addEventListener('change', function(){
-	if( filter.value == 'All' ){
-		//container.innerHTML = '';
-		container.innerHTML += makeBox(all);
+	if( filter.value == 'all' ){
+		container.innerHTML = '';
+		all.forEach((element) => {
+			container.innerHTML += makeBox(element);
+		});
+	}
+	else if ( filter.value == 'animal'){
+		container.innerHTML = '';
+		animali.forEach((element) => {
+			container.innerHTML += makeBox(element);
+		});
+	}
+	else if (filter.value == 'vegetable') {
+		container.innerHTML = '';
+		verdure.forEach((element) => {
+			container.innerHTML += makeBox(element);
+		});
+	}
+	else if (filter.value == 'user') {
+		container.innerHTML = '';
+		utenti.forEach((element) => {
+			container.innerHTML += makeBox(element);
+		});
 	}
 });
 
