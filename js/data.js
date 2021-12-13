@@ -6,7 +6,7 @@
 //Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone(animal, vegetable, user).
 //Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
-const animals = [
+const all = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -120,3 +120,12 @@ const animals = [
 		color: 'blue'
 	}
 ];
+const container = document.querySelector(".content");
+all.forEach((element) => {
+	container.innerHTML += `
+        <div class="box">
+			<div><i class="${element.family} ${element.prefix}${element.type}" style="color:${element.color}"></i></div>
+            <h2>${element.name}</h2>
+        </div>
+    `;
+});
